@@ -55,8 +55,11 @@ class MainWindow(QMainWindow):
 
     # Save and exit
     def exit_win(self):
-        self.save()
-        self.close()
+        if file_name == "" and self.ui.textEdit.toPlainText() == "":
+            self.close()
+        else:
+            self.save()
+            self.close()
 
     # Close doc
     def close_doc(self):
