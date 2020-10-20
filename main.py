@@ -1,5 +1,5 @@
 from PyQt5 import  QtCore, QtGui, QtWidgets
-from PyQt5.QtWidgets import QApplication, QMainWindow, QGraphicsDropShadowEffect
+from PyQt5.QtWidgets import QApplication, QMainWindow, QGraphicsDropShadowEffect, QMessageBox
 import sys
 
 
@@ -21,7 +21,6 @@ class MainWindow(QMainWindow):
         QMainWindow.__init__(self)
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
-
 
         # Move Window
         def moveWindow(event):
@@ -76,6 +75,7 @@ class MainWindow(QMainWindow):
     # open file and write
     def save(self):
         global file_name
+
         if file_name == "":
             self.save_as()
 
@@ -90,6 +90,7 @@ class MainWindow(QMainWindow):
 
             except:
                 pass
+
 
     # Save_As method 
     def save_as(self):
@@ -120,7 +121,13 @@ class MainWindow(QMainWindow):
                     file_n.close()
 
         except:
-            pass
+            msg = QMessageBox()
+            msg.setWindowTitle("Can't Open File !")
+            msg.setText("Permission Denied !")
+            msg.setIcon(QMessageBox.Warning)
+
+            x = msg.exec_()
+
 
 
     # App Events
