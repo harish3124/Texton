@@ -31,73 +31,74 @@ class Ui_MainWindow(object):
         font.setFamily("Comic Sans MS")
         font.setPointSize(11)
         self.drop_shadow_frame.setFont(font)
-        self.drop_shadow_frame.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.534091 rgba(0, 0, 30, 255), stop:0.761364 rgba(0, 0, 50, 255));\n"
-"border-radius: 10px;\n"
-"")
+        self.drop_shadow_frame.setStyleSheet("border-radius: 10px;\n"
+"background-color: rgb(55, 51, 60);")
         self.drop_shadow_frame.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.drop_shadow_frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.drop_shadow_frame.setObjectName("drop_shadow_frame")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.drop_shadow_frame)
-        self.verticalLayout.setContentsMargins(5, 5, 5, 5)
+        self.verticalLayout.setContentsMargins(0, 5, 0, 5)
         self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName("verticalLayout")
         self.title_bar = QtWidgets.QFrame(self.drop_shadow_frame)
-        self.title_bar.setMaximumSize(QtCore.QSize(16777215, 50))
+        self.title_bar.setMaximumSize(QtCore.QSize(16777215, 25))
         self.title_bar.setStyleSheet("background-color: none")
         self.title_bar.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.title_bar.setFrameShadow(QtWidgets.QFrame.Raised)
         self.title_bar.setObjectName("title_bar")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.title_bar)
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout.setSpacing(0)
         self.horizontalLayout.setObjectName("horizontalLayout")
-        self.frame_title = QtWidgets.QFrame(self.title_bar)
-        self.frame_title.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_title.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_title.setObjectName("frame_title")
-        self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.frame_title)
-        self.horizontalLayout_2.setContentsMargins(15, 0, 0, 0)
-        self.horizontalLayout_2.setSpacing(0)
-        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
-        self.label_title = QtWidgets.QLabel(self.frame_title)
-        font = QtGui.QFont()
-        font.setFamily("Comic Sans MS")
-        font.setPointSize(14)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_title.setFont(font)
-        self.label_title.setStyleSheet("color: rgb(0, 255, 255);")
-        self.label_title.setObjectName("label_title")
-        self.horizontalLayout_2.addWidget(self.label_title)
-        self.frame_fkeys = QtWidgets.QFrame(self.frame_title)
-        self.frame_fkeys.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_fkeys.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_fkeys.setObjectName("frame_fkeys")
-        self.btn_save = QtWidgets.QPushButton(self.frame_fkeys)
-        self.btn_save.setGeometry(QtCore.QRect(227, 11, 24, 16))
-        self.btn_save.setText("")
-        self.btn_save.setObjectName("btn_save")
-        self.btn_save_as = QtWidgets.QPushButton(self.frame_fkeys)
-        self.btn_save_as.setGeometry(QtCore.QRect(154, 11, 24, 16))
-        self.btn_save_as.setText("")
-        self.btn_save_as.setObjectName("btn_save_as")
-        self.btn_open = QtWidgets.QPushButton(self.frame_fkeys)
-        self.btn_open.setGeometry(QtCore.QRect(82, 11, 24, 16))
-        self.btn_open.setText("")
-        self.btn_open.setObjectName("btn_open")
-        self.btn_doc_close = QtWidgets.QPushButton(self.frame_fkeys)
-        self.btn_doc_close.setGeometry(QtCore.QRect(9, 11, 24, 16))
-        self.btn_doc_close.setText("")
-        self.btn_doc_close.setObjectName("btn_doc_close")
-        self.horizontalLayout_2.addWidget(self.frame_fkeys)
-        self.horizontalLayout.addWidget(self.frame_title)
         self.frame_btns = QtWidgets.QFrame(self.title_bar)
         self.frame_btns.setMaximumSize(QtCore.QSize(100, 16777215))
         self.frame_btns.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_btns.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_btns.setObjectName("frame_btns")
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.frame_btns)
+        self.horizontalLayout_3.setContentsMargins(-1, 0, -1, 0)
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+        self.btn_close = QtWidgets.QPushButton(self.frame_btns)
+        self.btn_close.setMinimumSize(QtCore.QSize(16, 16))
+        self.btn_close.setMaximumSize(QtCore.QSize(17, 17))
+        font = QtGui.QFont()
+        font.setFamily("Comic Sans MS")
+        font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
+        self.btn_close.setFont(font)
+        self.btn_close.setStyleSheet("QPushButton {\n"
+"    border: none;\n"
+"    border-radius: 8px;\n"
+"    background-color: rgb(253, 81, 67);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgba(254, 79, 69, 150);\n"
+"}")
+        self.btn_close.setText("")
+        self.btn_close.setObjectName("btn_close")
+        self.horizontalLayout_3.addWidget(self.btn_close)
+        self.btn_max = QtWidgets.QPushButton(self.frame_btns)
+        self.btn_max.setMinimumSize(QtCore.QSize(16, 16))
+        self.btn_max.setMaximumSize(QtCore.QSize(17, 17))
+        font = QtGui.QFont()
+        font.setFamily("Comic Sans MS")
+        font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
+        self.btn_max.setFont(font)
+        self.btn_max.setStyleSheet("QPushButton {\n"
+"    border: none;\n"
+"    border-radius: 8px;\n"
+"    background-color: rgb(224, 183, 40);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgba(226, 182, 29, 150);\n"
+"}")
+        self.btn_max.setText("")
+        self.btn_max.setObjectName("btn_max")
+        self.horizontalLayout_3.addWidget(self.btn_max)
         self.btn_min = QtWidgets.QPushButton(self.frame_btns)
         self.btn_min.setMinimumSize(QtCore.QSize(16, 16))
         self.btn_min.setMaximumSize(QtCore.QSize(17, 17))
@@ -113,58 +114,65 @@ class Ui_MainWindow(object):
         self.btn_min.setStyleSheet("QPushButton {\n"
 "    border: none;\n"
 "    border-radius: 8px;\n"
-"    background-color: rgb(85, 255, 127);\n"
+"    background-color: rgb(71, 186, 34);\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"    background-color: rgba(85, 255, 127, 150);\n"
+"    background-color: rgba(79, 188, 35, 150);\n"
 "}")
         self.btn_min.setText("")
         self.btn_min.setObjectName("btn_min")
         self.horizontalLayout_3.addWidget(self.btn_min)
-        self.btn_max = QtWidgets.QPushButton(self.frame_btns)
-        self.btn_max.setMinimumSize(QtCore.QSize(16, 16))
-        self.btn_max.setMaximumSize(QtCore.QSize(17, 17))
-        font = QtGui.QFont()
-        font.setFamily("Comic Sans MS")
-        font.setPointSize(13)
-        font.setBold(True)
-        font.setWeight(75)
-        self.btn_max.setFont(font)
-        self.btn_max.setStyleSheet("QPushButton {\n"
-"    border: none;\n"
-"    border-radius: 8px;\n"
-"    background-color: rgb(255, 170, 0);\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background-color: rgba(255, 170, 0, 150);\n"
-"}")
-        self.btn_max.setText("")
-        self.btn_max.setObjectName("btn_max")
-        self.horizontalLayout_3.addWidget(self.btn_max)
-        self.btn_close = QtWidgets.QPushButton(self.frame_btns)
-        self.btn_close.setMinimumSize(QtCore.QSize(16, 16))
-        self.btn_close.setMaximumSize(QtCore.QSize(17, 17))
-        font = QtGui.QFont()
-        font.setFamily("Comic Sans MS")
-        font.setPointSize(13)
-        font.setBold(True)
-        font.setWeight(75)
-        self.btn_close.setFont(font)
-        self.btn_close.setStyleSheet("QPushButton {\n"
-"    border: none;\n"
-"    border-radius: 8px;\n"
-"    background-color: rgb(255, 0, 0);\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background-color: rgba(255, 0, 0, 150);\n"
-"}")
-        self.btn_close.setText("")
-        self.btn_close.setObjectName("btn_close")
-        self.horizontalLayout_3.addWidget(self.btn_close)
         self.horizontalLayout.addWidget(self.frame_btns)
+        self.frame_title = QtWidgets.QFrame(self.title_bar)
+        self.frame_title.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_title.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_title.setObjectName("frame_title")
+        self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.frame_title)
+        self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_2.setSpacing(0)
+        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+        self.label_title = QtWidgets.QLabel(self.frame_title)
+        font = QtGui.QFont()
+        font.setFamily("Comic Sans MS")
+        font.setPointSize(14)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_title.setFont(font)
+        self.label_title.setStyleSheet("color: rgb(213, 213, 213);\n"
+"\n"
+"")
+        self.label_title.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_title.setObjectName("label_title")
+        self.horizontalLayout_2.addWidget(self.label_title)
+        self.frame_fkeys = QtWidgets.QFrame(self.frame_title)
+        self.frame_fkeys.setMinimumSize(QtCore.QSize(100, 32))
+        self.frame_fkeys.setMaximumSize(QtCore.QSize(10, 16777215))
+        self.frame_fkeys.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_fkeys.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_fkeys.setObjectName("frame_fkeys")
+        self.btn_save = QtWidgets.QPushButton(self.frame_fkeys)
+        self.btn_save.setGeometry(QtCore.QRect(227, 11, 0, 0))
+        self.btn_save.setMaximumSize(QtCore.QSize(0, 0))
+        self.btn_save.setText("")
+        self.btn_save.setObjectName("btn_save")
+        self.btn_save_as = QtWidgets.QPushButton(self.frame_fkeys)
+        self.btn_save_as.setGeometry(QtCore.QRect(154, 11, 0, 0))
+        self.btn_save_as.setMaximumSize(QtCore.QSize(0, 0))
+        self.btn_save_as.setText("")
+        self.btn_save_as.setObjectName("btn_save_as")
+        self.btn_open = QtWidgets.QPushButton(self.frame_fkeys)
+        self.btn_open.setGeometry(QtCore.QRect(82, 11, 0, 0))
+        self.btn_open.setMaximumSize(QtCore.QSize(0, 0))
+        self.btn_open.setText("")
+        self.btn_open.setObjectName("btn_open")
+        self.btn_doc_close = QtWidgets.QPushButton(self.frame_fkeys)
+        self.btn_doc_close.setGeometry(QtCore.QRect(9, 11, 0, 0))
+        self.btn_doc_close.setMaximumSize(QtCore.QSize(0, 0))
+        self.btn_doc_close.setText("")
+        self.btn_doc_close.setObjectName("btn_doc_close")
+        self.horizontalLayout_2.addWidget(self.frame_fkeys)
+        self.horizontalLayout.addWidget(self.frame_title)
         self.verticalLayout.addWidget(self.title_bar)
         self.contents_bar = QtWidgets.QFrame(self.drop_shadow_frame)
         self.contents_bar.setStyleSheet("background-color: none")
@@ -172,22 +180,25 @@ class Ui_MainWindow(object):
         self.contents_bar.setFrameShadow(QtWidgets.QFrame.Raised)
         self.contents_bar.setObjectName("contents_bar")
         self.horizontalLayout_5 = QtWidgets.QHBoxLayout(self.contents_bar)
+        self.horizontalLayout_5.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_5.setObjectName("horizontalLayout_5")
         self.textEdit = QtWidgets.QTextEdit(self.contents_bar)
         font = QtGui.QFont()
         font.setFamily("Consolas")
         font.setPointSize(15)
         self.textEdit.setFont(font)
-        self.textEdit.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.534091 rgba(0, 0, 30, 255), stop:0.761364 rgba(0, 0, 50, 255));\n"
+        self.textEdit.setStyleSheet("color: rgba(0, 255, 255, 255);\n"
 "\n"
-"color: rgba(0, 255, 255, 255);\n"
+"border: 1px solid rgba(0, 255, 255, 25);\n"
 "\n"
-"border: 1px solid rgba(0, 255, 255, 25);")
+"border-radius: 0px;\n"
+"\n"
+"background-color: rgb(31, 29, 34);")
         self.textEdit.setObjectName("textEdit")
         self.horizontalLayout_5.addWidget(self.textEdit)
         self.verticalLayout.addWidget(self.contents_bar)
         self.credits_bar = QtWidgets.QFrame(self.drop_shadow_frame)
-        self.credits_bar.setMaximumSize(QtCore.QSize(16777215, 25))
+        self.credits_bar.setMaximumSize(QtCore.QSize(16777215, 15))
         self.credits_bar.setStyleSheet("background-color: none")
         self.credits_bar.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.credits_bar.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -207,11 +218,12 @@ class Ui_MainWindow(object):
         self.label_credits = QtWidgets.QLabel(self.credits_label_frame)
         font = QtGui.QFont()
         font.setFamily("Comic Sans MS")
-        font.setPointSize(11)
+        font.setPointSize(8)
         font.setBold(True)
         font.setWeight(75)
         self.label_credits.setFont(font)
-        self.label_credits.setStyleSheet("color: rgb(85, 255, 255);")
+        self.label_credits.setStyleSheet("color: rgb(213, 213, 213);\n"
+"")
         self.label_credits.setObjectName("label_credits")
         self.horizontalLayout_6.addWidget(self.label_credits)
         self.frame_status = QtWidgets.QFrame(self.credits_label_frame)
@@ -226,15 +238,19 @@ class Ui_MainWindow(object):
         self.frame_status.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_status.setObjectName("frame_status")
         self.horizontalLayout_7 = QtWidgets.QHBoxLayout(self.frame_status)
-        self.horizontalLayout_7.setContentsMargins(250, 0, 0, 0)
+        self.horizontalLayout_7.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_7.setObjectName("horizontalLayout_7")
         self.label_status = QtWidgets.QLabel(self.frame_status)
         font = QtGui.QFont()
+        font.setPointSize(10)
         font.setBold(True)
         font.setItalic(False)
         font.setUnderline(False)
         font.setWeight(75)
         self.label_status.setFont(font)
+        self.label_status.setStyleSheet("color: rgb(213, 213, 213);\n"
+"")
+        self.label_status.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.label_status.setObjectName("label_status")
         self.horizontalLayout_7.addWidget(self.label_status)
         self.horizontalLayout_6.addWidget(self.frame_status)

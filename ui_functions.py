@@ -27,7 +27,7 @@ class UIFunctions(MainWindow):
 
             # Remove margin and border radius if maximized
             self.ui.drop_shadow_layout.setContentsMargins(0, 0, 0, 0)
-            self.ui.drop_shadow_frame.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.534091 rgba(0, 0, 30, 255), stop:0.761364 rgba(0, 0, 50, 255)); border-radius: 0px;")
+            self.ui.drop_shadow_frame.setStyleSheet("background-color: rgb(55, 51, 60); border-radius: 0px;")
 
         # Minimize window
         else:
@@ -35,7 +35,7 @@ class UIFunctions(MainWindow):
             self.showNormal()
             self.resize(self.width()+1, self.height()+1)
             self.ui.drop_shadow_layout.setContentsMargins(10, 10, 10, 10)
-            self.ui.drop_shadow_frame.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.534091 rgba(0, 0, 30, 255), stop:0.761364 rgba(0, 0, 50, 255)); border-radius: 10px;")
+            self.ui.drop_shadow_frame.setStyleSheet("background-color: rgb(55, 51, 60); border-radius: 10px;")
 
 
     # UI definitions

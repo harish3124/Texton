@@ -99,7 +99,7 @@ class MainWindow(QMainWindow):
             name = QtWidgets.QFileDialog.getSaveFileName(self, "Save As")
             if name[0] != "":
                 file_name = name[0]
-                self.ui.label_title.setText(file_name)
+                self.ui.label_title.setText((file_name.split("/"))[-1])
                 self.save()
         except:
             pass
@@ -115,7 +115,7 @@ class MainWindow(QMainWindow):
                 with open(file_name, "r") as file_n:
                     data = file_n.read()
                     self.ui.textEdit.setText(str(data))
-                    self.ui.label_title.setText(file_name)
+                    self.ui.label_title.setText((file_name.split("/"))[-1])
                     self.ui.label_status.setText("Opened")
                     file_n.close()
 
