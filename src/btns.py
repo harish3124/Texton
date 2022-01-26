@@ -2,11 +2,26 @@ from PyQt6.QtWidgets import QFileDialog
 
 from MainWindow import Ui_MainWindow
 
+from hotkeys import show_hotkeys
+
 win_instance: Ui_MainWindow
 file_path = ""
 
+# Set Title to file name
+def set_title():
+    if file_path == "":
+        win_instance.label_title.setText("Untitled")
+        return
+
+    # Use Platform specific seperators ( "\" for windows and "/" for *NIX)
+    path_seperator = "\\" if "\\" in file_path else "/"
+    file_name = file_path.split(path_seperator)[-1]
+    win_instance.label_title.setText(file_name)
+
+
 # Exit
 def close():
+    save_as()
     exit()
 
 
@@ -24,6 +39,8 @@ def open_file():
         print(fp.read())
         fp.close()
 
+    set_title()
+
 
 def save():
     # If the File Path is empty then call the save_as function
@@ -33,6 +50,8 @@ def save():
     with open(file_path, "w") as fp:
         fp.write(win_instance.editor.toPlainText())
         fp.close()
+
+    set_title()
 
 
 def save_as():
@@ -51,9 +70,7 @@ def close_file():
     save_as()
     win_instance.editor.setPlainText("")
 
-
-def show_hotkeys():
-    pass
+    set_title()
 
 
 # Bind all the Buttons
@@ -65,6 +82,7 @@ def bind(win: Ui_MainWindow):
     win.btn_close.clicked.connect(close)
     win.btn_file_close.clicked.connect(close_file)
     win.btn_open.clicked.connect(open_file)
-    win.btn_hotkey.clicked.connect(show_hotkeys)
     win.btn_save.clicked.connect(save)
     win.btn_save_as.clicked.connect(save_as)
+
+    win.btn_hotkey.clicked.connect(show_hotkeys)
