@@ -1,4 +1,5 @@
 # Import PyQt and other libraries
+from PyQt6.QtCore import Qt
 from PyQt6.QtWidgets import QApplication, QMainWindow
 import sys
 
@@ -10,6 +11,9 @@ from MainWindow import Ui_MainWindow
 def add_functionality():
     win_instance.editor.setFocus()
     bind(win_instance)
+
+    # Disable Window Frames
+    win.setWindowFlag(Qt.WindowType.FramelessWindowHint)
 
 
 if __name__ == "__main__":
