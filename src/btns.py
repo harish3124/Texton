@@ -27,6 +27,10 @@ def close():
 
 # Open a file
 def open_file():
+
+    # Save before opening a new file
+    save_as()
+
     global file_path
     file_path = QFileDialog().getOpenFileName()[0]
 
@@ -55,6 +59,9 @@ def save():
 
 
 def save_as():
+    # Return if empty file
+    if win_instance.editor.toPlainText() == '': return
+
     global file_path
     file_path = QFileDialog().getSaveFileName()[0]
 

@@ -1,6 +1,6 @@
 [tool.poetry]
-name = "pytext"
-version = "0.0.1"
+name = "texton"
+version = "0.1.0"
 description = ""
 authors = ["harish3124 <harishhari3112004@gmail.com>"]
 
