@@ -29,7 +29,7 @@
    </property>
    <property name="styleSheet">
     <string notr="true">border-radius: 10px;
-background-color: rgb(55, 51, 60);</string>
+background-color: #1A1826;</string>
    </property>
    <property name="frameShape">
     <enum>QFrame::NoFrame</enum>
@@ -124,7 +124,7 @@ background-color: rgb(55, 51, 60);</string>
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">color: rgb(213, 213, 213);
+          <string notr="true">color: #DDB6F2;
 
 </string>
          </property>
@@ -208,7 +208,7 @@ QPushButton:hover {
        <item>
         <widget class="QFrame" name="hotkey_frame">
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(80, 75, 88);</string>
+          <string notr="true">background-color: #302D41;</string>
          </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
@@ -233,12 +233,13 @@ QPushButton:hover {
            <widget class="QLabel" name="label">
             <property name="font">
              <font>
+              <family>JetBrainsMonoMedium NF</family>
               <pointsize>16</pointsize>
               <italic>false</italic>
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">color: rgb(255, 255, 255);</string>
+             <string notr="true">color: #F28FAD;</string>
             </property>
             <property name="text">
              <string>Open : Ctrl+O

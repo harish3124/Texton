@@ -19,7 +19,7 @@ class Ui_hotkey_win(object):
         font.setPointSize(11)
         self.drop_shadow_frame.setFont(font)
         self.drop_shadow_frame.setStyleSheet("border-radius: 10px;\n"
-"background-color: rgb(55, 51, 60);")
+"background-color: #1A1826;")
         self.drop_shadow_frame.setFrameShape(QtWidgets.QFrame.Shape.NoFrame)
         self.drop_shadow_frame.setFrameShadow(QtWidgets.QFrame.Shadow.Plain)
         self.drop_shadow_frame.setObjectName("drop_shadow_frame")
@@ -51,7 +51,7 @@ class Ui_hotkey_win(object):
         font.setBold(False)
         font.setItalic(False)
         self.label_title.setFont(font)
-        self.label_title.setStyleSheet("color: rgb(213, 213, 213);\n"
+        self.label_title.setStyleSheet("color: #DDB6F2;\n"
 "\n"
 "")
         self.label_title.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
@@ -87,7 +87,7 @@ class Ui_hotkey_win(object):
         self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.hotkey_frame = QtWidgets.QFrame(self.contents_frame)
-        self.hotkey_frame.setStyleSheet("background-color: rgb(80, 75, 88);")
+        self.hotkey_frame.setStyleSheet("background-color: #302D41;")
         self.hotkey_frame.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.hotkey_frame.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.hotkey_frame.setObjectName("hotkey_frame")
@@ -96,10 +96,11 @@ class Ui_hotkey_win(object):
         self.horizontalLayout_4.setObjectName("horizontalLayout_4")
         self.label = QtWidgets.QLabel(self.hotkey_frame)
         font = QtGui.QFont()
+        font.setFamily("JetBrainsMonoMedium NF")
         font.setPointSize(16)
         font.setItalic(False)
         self.label.setFont(font)
-        self.label.setStyleSheet("color: rgb(255, 255, 255);")
+        self.label.setStyleSheet("color: #F28FAD;")
         self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label.setObjectName("label")
         self.horizontalLayout_4.addWidget(self.label)

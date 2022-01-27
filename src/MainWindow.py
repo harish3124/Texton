@@ -29,12 +29,12 @@ class Ui_MainWindow(object):
         font.setPointSize(11)
         self.drop_shadow_frame.setFont(font)
         self.drop_shadow_frame.setStyleSheet("border-radius: 10px;\n"
-"background-color: rgb(55, 51, 60);")
+"background-color: #1A1826;")
         self.drop_shadow_frame.setFrameShape(QtWidgets.QFrame.Shape.NoFrame)
         self.drop_shadow_frame.setFrameShadow(QtWidgets.QFrame.Shadow.Plain)
         self.drop_shadow_frame.setObjectName("drop_shadow_frame")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.drop_shadow_frame)
-        self.verticalLayout.setContentsMargins(0, 5, 0, 0)
+        self.verticalLayout.setContentsMargins(0, 3, 0, 0)
         self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName("verticalLayout")
         self.title_bar = QtWidgets.QFrame(self.drop_shadow_frame)
@@ -55,9 +55,10 @@ class Ui_MainWindow(object):
         self.btn_hotkey.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.btn_hotkey.setStyleSheet("color: rgb(213, 213, 213);\n"
 "\n"
-"background-color: rgb(80, 75, 88);\n"
+"background-color: #6E6C7E;\n"
 "\n"
 "border-radius: 5;")
+        self.btn_hotkey.setText("")
         self.btn_hotkey.setObjectName("btn_hotkey")
         self.horizontalLayout.addWidget(self.btn_hotkey)
         self.frame_fkeys = QtWidgets.QFrame(self.title_bar)
@@ -95,7 +96,7 @@ class Ui_MainWindow(object):
         font.setBold(False)
         font.setItalic(False)
         self.label_title.setFont(font)
-        self.label_title.setStyleSheet("color: rgb(213, 213, 213);\n"
+        self.label_title.setStyleSheet("color: #DDB6F2;\n"
 "\n"
 "")
         self.label_title.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
@@ -138,7 +139,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.editor_frame = QtWidgets.QFrame(self.contents_frame)
-        self.editor_frame.setStyleSheet("background-color: rgb(80, 75, 88);")
+        self.editor_frame.setStyleSheet("background-color: #302D41;")
         self.editor_frame.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.editor_frame.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.editor_frame.setObjectName("editor_frame")
@@ -148,11 +149,11 @@ class Ui_MainWindow(object):
         self.editor = QtWidgets.QPlainTextEdit(self.editor_frame)
         font = QtGui.QFont()
         font.setFamily("JetBrainsMonoMedium NF")
-        font.setPointSize(10)
+        font.setPointSize(11)
         self.editor.setFont(font)
-        self.editor.setStyleSheet("color: rgb(255, 255, 255);\n"
+        self.editor.setStyleSheet("color: #F28FAD;\n"
 "\n"
-"background-color: rgb(80, 75, 88);\n"
+"background-color: #302D41;\n"
 "\n"
 "border: 1px solid rgba(0, 255, 255, 25);\n"
 "\n"
@@ -172,7 +173,6 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.btn_hotkey.setText(_translate("MainWindow", "H"))
         self.btn_save.setShortcut(_translate("MainWindow", "Ctrl+S"))
         self.btn_save_as.setShortcut(_translate("MainWindow", "Ctrl+Shift+S"))
         self.btn_open.setShortcut(_translate("MainWindow", "Ctrl+O"))
