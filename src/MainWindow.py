@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'UI/MainWindow.ui'
+# Form implementation generated from reading ui file 'assets/MainWindow.ui'
 #
 # Created by: PyQt6 UI code generator 6.2.2
 #
@@ -14,6 +14,10 @@ class Ui_MainWindow(object):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(750, 500)
         MainWindow.setMinimumSize(QtCore.QSize(500, 300))
+        font = QtGui.QFont()
+        font.setFamily("JetBrainsMonoMedium NF")
+        font.setPointSize(11)
+        MainWindow.setFont(font)
         MainWindow.setStyleSheet("QScrollBar:vertical {\n"
 "    width: 1px\n"
 "}")
@@ -148,7 +152,6 @@ class Ui_MainWindow(object):
         self.horizontalLayout_4.setObjectName("horizontalLayout_4")
         self.editor = QtWidgets.QPlainTextEdit(self.editor_frame)
         font = QtGui.QFont()
-        font.setFamily("JetBrainsMonoMedium NF")
         font.setPointSize(11)
         self.editor.setFont(font)
         self.editor.setStyleSheet("color: #F28FAD;\n"

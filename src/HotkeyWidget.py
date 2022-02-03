@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'UI/HotkeyWidget.ui'
+# Form implementation generated from reading ui file 'assets/HotkeyWidget.ui'
 #
 # Created by: PyQt6 UI code generator 6.2.2
 #
@@ -17,6 +17,7 @@ class Ui_hotkey_win(object):
         self.drop_shadow_frame.setGeometry(QtCore.QRect(0, 0, 401, 301))
         font = QtGui.QFont()
         font.setPointSize(11)
+        font.setItalic(True)
         self.drop_shadow_frame.setFont(font)
         self.drop_shadow_frame.setStyleSheet("border-radius: 10px;\n"
 "background-color: #1A1826;")
@@ -96,7 +97,6 @@ class Ui_hotkey_win(object):
         self.horizontalLayout_4.setObjectName("horizontalLayout_4")
         self.label = QtWidgets.QLabel(self.hotkey_frame)
         font = QtGui.QFont()
-        font.setFamily("JetBrainsMonoMedium NF")
         font.setPointSize(16)
         font.setItalic(False)
         self.label.setFont(font)
