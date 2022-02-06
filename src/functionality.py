@@ -1,4 +1,4 @@
-from PyQt6 import QtCore, QtGui
+from PyQt6 import QtCore, QtGui, QtWidgets
 
 from btns import bind
 
@@ -23,12 +23,22 @@ def move_window(event: QtGui.QMouseEvent):
         win.move(win.pos() + event.pos() - cursor_pos)
 
 
+# Add dropshadow to the window
+def add_dropshadow():
+    win.shadow = QtWidgets.QGraphicsDropShadowEffect(win)
+    win.shadow.setBlurRadius(20)
+    win.shadow.setXOffset(0)
+    win.shadow.setYOffset(0)
+    win.shadow.setColor(QtGui.QColor(0, 0, 0, 100))
+
+
 def add_functionality(app, app_instance):
     global win, win_instance
     win, win_instance = app, app_instance
     win_instance.editor.setFocus()
     bind(win_instance)
     load_font()
+    add_dropshadow()
 
     win_instance.title_bar.mouseMoveEvent = move_window
 
