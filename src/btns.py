@@ -60,7 +60,8 @@ def save():
 
 def save_as():
     # Return if empty file
-    if win_instance.editor.toPlainText() == '': return
+    if win_instance.editor.toPlainText() == "":
+        return
 
     global file_path
     file_path = QFileDialog().getSaveFileName()[0]

@@ -15,12 +15,9 @@ class Ui_MainWindow(object):
         MainWindow.resize(750, 500)
         MainWindow.setMinimumSize(QtCore.QSize(500, 300))
         font = QtGui.QFont()
-        font.setFamily("JetBrainsMonoMedium NF")
         font.setPointSize(11)
         MainWindow.setFont(font)
-        MainWindow.setStyleSheet("QScrollBar:vertical {\n"
-"    width: 1px\n"
-"}")
+        MainWindow.setStyleSheet("QScrollBar:vertical {\n" "    width: 1px\n" "}")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setEnabled(True)
         self.centralwidget.setObjectName("centralwidget")
@@ -32,8 +29,9 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(11)
         self.drop_shadow_frame.setFont(font)
-        self.drop_shadow_frame.setStyleSheet("border-radius: 10px;\n"
-"background-color: #1A1826;")
+        self.drop_shadow_frame.setStyleSheet(
+            "border-radius: 10px;\n" "background-color: #1A1826;"
+        )
         self.drop_shadow_frame.setFrameShape(QtWidgets.QFrame.Shape.NoFrame)
         self.drop_shadow_frame.setFrameShadow(QtWidgets.QFrame.Shadow.Plain)
         self.drop_shadow_frame.setObjectName("drop_shadow_frame")
@@ -56,12 +54,16 @@ class Ui_MainWindow(object):
         font.setPointSize(11)
         font.setItalic(True)
         self.btn_hotkey.setFont(font)
-        self.btn_hotkey.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.btn_hotkey.setStyleSheet("color: rgb(213, 213, 213);\n"
-"\n"
-"background-color: #6E6C7E;\n"
-"\n"
-"border-radius: 5;")
+        self.btn_hotkey.setCursor(
+            QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor)
+        )
+        self.btn_hotkey.setStyleSheet(
+            "color: rgb(213, 213, 213);\n"
+            "\n"
+            "background-color: #6E6C7E;\n"
+            "\n"
+            "border-radius: 5;"
+        )
         self.btn_hotkey.setText("")
         self.btn_hotkey.setObjectName("btn_hotkey")
         self.horizontalLayout.addWidget(self.btn_hotkey)
@@ -100,9 +102,7 @@ class Ui_MainWindow(object):
         font.setBold(False)
         font.setItalic(False)
         self.label_title.setFont(font)
-        self.label_title.setStyleSheet("color: #DDB6F2;\n"
-"\n"
-"")
+        self.label_title.setStyleSheet("color: #DDB6F2;\n" "\n" "")
         self.label_title.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_title.setObjectName("label_title")
         self.horizontalLayout.addWidget(self.label_title)
@@ -120,22 +120,26 @@ class Ui_MainWindow(object):
         font.setPointSize(13)
         font.setBold(True)
         self.btn_close.setFont(font)
-        self.btn_close.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.btn_close.setStyleSheet("QPushButton {\n"
-"    border: none;\n"
-"    border-radius: 8px;\n"
-"    background-color: rgb(253, 81, 67);\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background-color: rgba(254, 79, 69, 150);\n"
-"}")
+        self.btn_close.setCursor(
+            QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor)
+        )
+        self.btn_close.setStyleSheet(
+            "QPushButton {\n"
+            "    border: none;\n"
+            "    border-radius: 8px;\n"
+            "    background-color: rgb(253, 81, 67);\n"
+            "}\n"
+            "\n"
+            "QPushButton:hover {\n"
+            "    background-color: rgba(254, 79, 69, 150);\n"
+            "}"
+        )
         self.btn_close.setText("")
         self.btn_close.setObjectName("btn_close")
         self.horizontalLayout.addWidget(self.btn_close)
         self.verticalLayout.addWidget(self.title_bar)
         self.contents_frame = QtWidgets.QFrame(self.drop_shadow_frame)
-        self.contents_frame.setStyleSheet("background-color: none")
+        self.contents_frame.setStyleSheet("background-color: #1A1826;")
         self.contents_frame.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.contents_frame.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.contents_frame.setObjectName("contents_frame")
@@ -154,17 +158,22 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(11)
         self.editor.setFont(font)
-        self.editor.setStyleSheet("color: #F28FAD;\n"
-"\n"
-"background-color: #302D41;\n"
-"\n"
-"border: 1px solid rgba(0, 255, 255, 25);\n"
-"\n"
-"border-radius: 10px;\n"
-"\n"
-"border: 0;")
+        self.editor.setStyleSheet(
+            "color: #F28FAD;\n"
+            "\n"
+            "background-color: #302D41;\n"
+            "\n"
+            "border: 1px solid rgba(0, 255, 255, 25);\n"
+            "\n"
+            "border-radius: 10px;\n"
+            "\n"
+            "border: 0;"
+        )
         self.editor.setObjectName("editor")
         self.horizontalLayout_4.addWidget(self.editor)
+        self.size_grip_layout = QtWidgets.QVBoxLayout()
+        self.size_grip_layout.setObjectName("size_grip_layout")
+        self.horizontalLayout_4.addLayout(self.size_grip_layout)
         self.horizontalLayout_2.addWidget(self.editor_frame)
         self.verticalLayout.addWidget(self.contents_frame)
         self.drop_shadow_layout.addWidget(self.drop_shadow_frame)

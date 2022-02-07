@@ -32,6 +32,17 @@ def add_dropshadow():
     win.shadow.setColor(QtGui.QColor(0, 0, 0, 100))
 
 
+# Setup window resizing
+def setup_sizegrip():
+    sizegrip = QtWidgets.QSizeGrip(win)
+
+    win_instance.size_grip_layout.addWidget(
+        sizegrip,
+        0,
+        QtCore.Qt.AlignmentFlag.AlignBottom | QtCore.Qt.AlignmentFlag.AlignRight,
+    )
+
+
 def add_functionality(app, app_instance):
     global win, win_instance
     win, win_instance = app, app_instance
@@ -39,8 +50,10 @@ def add_functionality(app, app_instance):
     bind(win_instance)
     load_font()
     add_dropshadow()
+    setup_sizegrip()
 
     win_instance.title_bar.mouseMoveEvent = move_window
 
     # Disable Window Frames
     win.setWindowFlag(QtCore.Qt.WindowType.FramelessWindowHint)
+    win.setAttribute(QtCore.Qt.WidgetAttribute.WA_TranslucentBackground)

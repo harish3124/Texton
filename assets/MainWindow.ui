@@ -18,7 +18,6 @@
   </property>
   <property name="font">
    <font>
-    <family>JetBrainsMonoMedium NF</family>
     <pointsize>11</pointsize>
    </font>
   </property>
@@ -350,7 +349,7 @@ QPushButton:hover {
        <item>
         <widget class="QFrame" name="contents_frame">
          <property name="styleSheet">
-          <string notr="true">background-color: none</string>
+          <string notr="true">background-color: #1A1826;</string>
          </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
@@ -414,6 +413,9 @@ border-radius: 10px;
 border: 0;</string>
                </property>
               </widget>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="size_grip_layout"/>
              </item>
             </layout>
            </widget>
