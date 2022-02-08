@@ -19,9 +19,8 @@ class Ui_hotkey_win(object):
         font.setPointSize(11)
         font.setItalic(True)
         self.drop_shadow_frame.setFont(font)
-        self.drop_shadow_frame.setStyleSheet(
-            "border-radius: 10px;\n" "background-color: #1A1826;"
-        )
+        self.drop_shadow_frame.setStyleSheet("border-radius: 10px;\n"
+"background-color: rgb(34, 46, 65);")
         self.drop_shadow_frame.setFrameShape(QtWidgets.QFrame.Shape.NoFrame)
         self.drop_shadow_frame.setFrameShadow(QtWidgets.QFrame.Shadow.Plain)
         self.drop_shadow_frame.setObjectName("drop_shadow_frame")
@@ -53,7 +52,7 @@ class Ui_hotkey_win(object):
         font.setBold(False)
         font.setItalic(False)
         self.label_title.setFont(font)
-        self.label_title.setStyleSheet("color: #DDB6F2;\n" "\n" "")
+        self.label_title.setStyleSheet("color: #53c6ba;")
         self.label_title.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_title.setObjectName("label_title")
         self.horizontalLayout.addWidget(self.label_title)
@@ -64,20 +63,16 @@ class Ui_hotkey_win(object):
         font.setPointSize(13)
         font.setBold(True)
         self.btn_close.setFont(font)
-        self.btn_close.setCursor(
-            QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor)
-        )
-        self.btn_close.setStyleSheet(
-            "QPushButton {\n"
-            "    border: none;\n"
-            "    border-radius: 8px;\n"
-            "    background-color: rgb(253, 81, 67);\n"
-            "}\n"
-            "\n"
-            "QPushButton:hover {\n"
-            "    background-color: rgba(254, 79, 69, 150);\n"
-            "}"
-        )
+        self.btn_close.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btn_close.setStyleSheet("QPushButton {\n"
+"    border: none;\n"
+"    border-radius: 8px;\n"
+"    background-color: rgb(253, 81, 67);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: rgba(254, 79, 69, 150);\n"
+"}")
         self.btn_close.setText("")
         self.btn_close.setObjectName("btn_close")
         self.horizontalLayout.addWidget(self.btn_close)
@@ -91,7 +86,7 @@ class Ui_hotkey_win(object):
         self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.hotkey_frame = QtWidgets.QFrame(self.contents_frame)
-        self.hotkey_frame.setStyleSheet("background-color: #302D41;")
+        self.hotkey_frame.setStyleSheet("background-color: #0E131B;")
         self.hotkey_frame.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.hotkey_frame.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.hotkey_frame.setObjectName("hotkey_frame")
@@ -103,7 +98,7 @@ class Ui_hotkey_win(object):
         font.setPointSize(16)
         font.setItalic(False)
         self.label.setFont(font)
-        self.label.setStyleSheet("color: #F28FAD;")
+        self.label.setStyleSheet("color: #e8c37d;")
         self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label.setObjectName("label")
         self.horizontalLayout_4.addWidget(self.label)
@@ -118,17 +113,12 @@ class Ui_hotkey_win(object):
         hotkey_win.setWindowTitle(_translate("hotkey_win", "Form"))
         self.label_title.setText(_translate("hotkey_win", "Hotkeys"))
         self.btn_close.setShortcut(_translate("hotkey_win", "Ctrl+Shift+Q"))
-        self.label.setText(
-            _translate(
-                "hotkey_win",
-                "Open : Ctrl+O\n"
-                "\n"
-                "Save : Ctrl+S\n"
-                "\n"
-                "Save As : Ctrl+Shift+s\n"
-                "\n"
-                "Close File : Ctrl+W\n"
-                "\n"
-                "Quit : Ctrl+Shift+Q",
-            )
-        )
+        self.label.setText(_translate("hotkey_win", "Open : Ctrl+O\n"
+"\n"
+"Save : Ctrl+S\n"
+"\n"
+"Save As : Ctrl+Shift+s\n"
+"\n"
+"Close File : Ctrl+W\n"
+"\n"
+"Quit : Ctrl+Shift+Q"))

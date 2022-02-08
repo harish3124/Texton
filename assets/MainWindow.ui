@@ -58,7 +58,7 @@
       </property>
       <property name="styleSheet">
        <string notr="true">border-radius: 10px;
-background-color: #1A1826;</string>
+background-color: rgb(34, 46, 65);</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::NoFrame</enum>
@@ -120,24 +120,18 @@ background-color: #1A1826;</string>
               <height>20</height>
              </size>
             </property>
-            <property name="font">
-             <font>
-              <pointsize>11</pointsize>
-              <italic>true</italic>
-             </font>
-            </property>
             <property name="cursor">
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
             <property name="styleSheet">
-             <string notr="true">color: rgb(213, 213, 213);
+             <string notr="true">color: #53c6ba;
 
-background-color: #6E6C7E;
+background-color: #0E131B;
 
 border-radius: 5;</string>
             </property>
             <property name="text">
-             <string/>
+             <string>H</string>
             </property>
            </widget>
           </item>
@@ -270,9 +264,7 @@ border-radius: 5;</string>
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">color: #DDB6F2;
-
-</string>
+             <string notr="true">color: #53c6ba;</string>
             </property>
             <property name="text">
              <string>Untitled</string>
@@ -349,7 +341,7 @@ QPushButton:hover {
        <item>
         <widget class="QFrame" name="contents_frame">
          <property name="styleSheet">
-          <string notr="true">background-color: #1A1826;</string>
+          <string notr="true">background-color: #0E131B;</string>
          </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
@@ -373,7 +365,7 @@ QPushButton:hover {
           <item>
            <widget class="QFrame" name="editor_frame">
             <property name="styleSheet">
-             <string notr="true">background-color: #302D41;</string>
+             <string notr="true">background-color: #0E131B;</string>
             </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
@@ -402,15 +394,18 @@ QPushButton:hover {
                 </font>
                </property>
                <property name="styleSheet">
-                <string notr="true">color: #F28FAD;
+                <string notr="true">color: #e8c37d;
 
-background-color: #302D41;
+background-color: #0E131B;
 
 border: 1px solid rgba(0, 255, 255, 25);
 
 border-radius: 10px;
 
 border: 0;</string>
+               </property>
+               <property name="plainText">
+                <string/>
                </property>
               </widget>
              </item>

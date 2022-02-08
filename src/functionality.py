@@ -12,6 +12,7 @@ def load_font():
     font.setPointSize(12)
 
     win_instance.editor.setFont(font)
+    win_instance.label_title.setFont(font)
 
 
 # Move the window with left click on title bar
