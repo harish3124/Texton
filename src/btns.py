@@ -1,11 +1,13 @@
-from PyQt6.QtWidgets import QFileDialog
+from PyQt6.QtWidgets import QFileDialog, QDialogButtonBox
 
 from MainWindow import Ui_MainWindow
-
+from FileSaveDialog import FileSaveDialog
 from hotkeys import show_hotkeys
 
 win_instance: Ui_MainWindow
 file_path = ""
+is_saved = False
+
 
 # Set Title to file name
 def set_title():
@@ -19,10 +21,31 @@ def set_title():
     win_instance.label_title.setText(file_name)
 
 
+# Prompt the FileSaveDialog
+def file_save_prompt():
+    if win_instance.editor.toPlainText() == "":
+        return True
+
+    # Create dialog
+    file_dialog = FileSaveDialog()
+    pressed_button = file_dialog.exec()
+
+    # Check the keycodes returned:
+    # Save --> 1
+    # No --> 0
+    if pressed_button == 1:
+        save()
+        return True
+    elif pressed_button == 0:
+        return True
+    else:
+        return False
+
+
 # Exit
 def close():
-    save_as()
-    exit()
+    if file_save_prompt():
+        exit()
 
 
 # Open a file
@@ -50,6 +73,7 @@ def save():
     # If the File Path is empty then call the save_as function
     if file_path == "":
         save_as()
+        return
 
     with open(file_path, "w") as fp:
         fp.write(win_instance.editor.toPlainText())
@@ -59,10 +83,6 @@ def save():
 
 
 def save_as():
-    # Return if empty file
-    if win_instance.editor.toPlainText() == "":
-        return
-
     global file_path
     file_path = QFileDialog().getSaveFileName()[0]
 
@@ -75,10 +95,9 @@ def save_as():
 
 # Save the file and then clear the editor
 def close_file():
-    save_as()
-    win_instance.editor.setPlainText("")
-
-    set_title()
+    if file_save_prompt():
+        win_instance.editor.setPlainText("")
+        set_title()
 
 
 # Bind all the Buttons

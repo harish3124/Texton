@@ -6,7 +6,7 @@ from btns import bind
 # Load fonts form assets directory
 def load_font():
     dir_ = QtCore.QDir("assets")
-    _id = QtGui.QFontDatabase.addApplicationFont("assets/JetBrains.ttf")
+    id = QtGui.QFontDatabase.addApplicationFont("assets/JetBrains.ttf")
 
     font = QtGui.QFont("JetBrainsMono NF")
     font.setPointSize(12)

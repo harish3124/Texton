@@ -19,8 +19,9 @@ class Ui_hotkey_win(object):
         font.setPointSize(11)
         font.setItalic(True)
         self.drop_shadow_frame.setFont(font)
-        self.drop_shadow_frame.setStyleSheet("border-radius: 10px;\n"
-"background-color: rgb(34, 46, 65);")
+        self.drop_shadow_frame.setStyleSheet(
+            "border-radius: 10px;\n" "background-color: rgb(34, 46, 65);"
+        )
         self.drop_shadow_frame.setFrameShape(QtWidgets.QFrame.Shape.NoFrame)
         self.drop_shadow_frame.setFrameShadow(QtWidgets.QFrame.Shadow.Plain)
         self.drop_shadow_frame.setObjectName("drop_shadow_frame")
@@ -63,16 +64,20 @@ class Ui_hotkey_win(object):
         font.setPointSize(13)
         font.setBold(True)
         self.btn_close.setFont(font)
-        self.btn_close.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.btn_close.setStyleSheet("QPushButton {\n"
-"    border: none;\n"
-"    border-radius: 8px;\n"
-"    background-color: rgb(253, 81, 67);\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background-color: rgba(254, 79, 69, 150);\n"
-"}")
+        self.btn_close.setCursor(
+            QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor)
+        )
+        self.btn_close.setStyleSheet(
+            "QPushButton {\n"
+            "    border: none;\n"
+            "    border-radius: 8px;\n"
+            "    background-color: rgb(253, 81, 67);\n"
+            "}\n"
+            "\n"
+            "QPushButton:hover {\n"
+            "    background-color: rgba(254, 79, 69, 150);\n"
+            "}"
+        )
         self.btn_close.setText("")
         self.btn_close.setObjectName("btn_close")
         self.horizontalLayout.addWidget(self.btn_close)
@@ -113,12 +118,17 @@ class Ui_hotkey_win(object):
         hotkey_win.setWindowTitle(_translate("hotkey_win", "Form"))
         self.label_title.setText(_translate("hotkey_win", "Hotkeys"))
         self.btn_close.setShortcut(_translate("hotkey_win", "Ctrl+Shift+Q"))
-        self.label.setText(_translate("hotkey_win", "Open : Ctrl+O\n"
-"\n"
-"Save : Ctrl+S\n"
-"\n"
-"Save As : Ctrl+Shift+s\n"
-"\n"
-"Close File : Ctrl+W\n"
-"\n"
-"Quit : Ctrl+Shift+Q"))
+        self.label.setText(
+            _translate(
+                "hotkey_win",
+                "Open : Ctrl+O\n"
+                "\n"
+                "Save : Ctrl+S\n"
+                "\n"
+                "Save As : Ctrl+Shift+s\n"
+                "\n"
+                "Close File : Ctrl+W\n"
+                "\n"
+                "Quit : Ctrl+Shift+Q",
+            )
+        )
