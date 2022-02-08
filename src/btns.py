@@ -51,8 +51,9 @@ def close():
 # Open a file
 def open_file():
 
-    # Save before opening a new file
-    save_as()
+    # prompt to save before opening a new file and do nothing if the user cancels
+    if not file_save_prompt():
+        return
 
     global file_path
     file_path = QFileDialog().getOpenFileName()[0]
