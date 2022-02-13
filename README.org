@@ -1,5 +1,7 @@
 * Texton
 ** A Simple Text editor made with Python and PyQt6
++ Made for educational purposes
+
 [[./screenshot.jpg]]
 
 ** Installation
